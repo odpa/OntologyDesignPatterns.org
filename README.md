@@ -16,6 +16,11 @@ not using the older version that depends on VirtualBox.
 
 `docker-compose up`
 
+The first time that Docker Compose is run the MySQL container might take longer
+than normal to load. If it takes more than 15 seconds, the Apache stuff in the 
+SMW container might not be able to connect to it and errors occur. If this happens, 
+simply abort the run (ctrl-c) and run the above command it again.
+
 ## Where is my data?
 
 The data for the two component Docker images (mysql and smw) should be
