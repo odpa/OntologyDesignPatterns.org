@@ -47,3 +47,9 @@ use port 8080 the relevant lines might read:
 
 `ports`<br/>
 `- 8080:80`
+
+Note that for this to work you will also need to tell your Apache and/or SMW
+inside the ontologydesignpatterns-smw container to generate URLs based on this
+new port number. I haven't had to do that myself so haven't figured out 
+exactly how to go about it, but an educated guess is that the LocalSettings.php 
+has something to do with it.
