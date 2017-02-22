@@ -26,8 +26,10 @@ where the docker-compose.yml file is kept.
 
 Look in the two files mysql-variables.env and smw-variables.env for environment
 variables that will be used by the two Docker containers spawned by this
-compose configuration. Note especially that for real deployment you will need
-to change the passwords in these files!
+compose configuration. Also, note that some variables from smw-variables.env are
+overruled by configuration directives in LocalSettings.php in the data 
+subdirectory. Note that for real deployment you **must** change the default 
+passwords in these files!
 
 ## How do I access it?
 
