@@ -4,7 +4,7 @@ services:
     container_name: ontologydesignpatterns-mysql
     image: mysql:5.6
     env_file:
-      - mysql-variables.env
+      - data/mysql-variables.env
     volumes:
       - ./data/mysql:/var/lib/mysql
   smw:
@@ -14,7 +14,7 @@ services:
     entrypoint: /utils/wait-for-it.sh mysql:3306 -- /entrypoint.sh apache2-foreground
     image: benhutchins/mediawiki:1.23
     env_file:
-      - smw-variables.env
+      - data/smw-variables.env
     ports:
       - 80:80
     links:
