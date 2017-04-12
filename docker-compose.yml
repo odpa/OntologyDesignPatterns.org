@@ -12,7 +12,7 @@ services:
     depends_on:
       - mysql
     entrypoint: /utils/wait-for-it.sh mysql:3306 -- /entrypoint.sh apache2-foreground
-    image: benhutchins/mediawiki:1.23
+    image: benhutchins/mediawiki:1.25
     env_file:
       - data/smw-variables.env
     ports:
